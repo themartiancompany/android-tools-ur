@@ -10,7 +10,7 @@ arch=(i686 x86_64)
 url='http://tools.android.com/'
 license=(Apache MIT)
 depends=(openssl pcre)
-makedepends=(git clang)
+makedepends=(git clang gtest)
 source=(git+https://android.googlesource.com/platform/system/core#tag=android-$pkgver
         git+https://android.googlesource.com/platform/system/extras#tag=android-$pkgver
         git+https://android.googlesource.com/platform/external/libselinux#tag=android-$pkgver
@@ -33,7 +33,7 @@ prepare() {
 }
 
 build() {
-  PKGVER=$pkgver ./build.sh
+  PKGVER=$pkgver sh ./build.sh
 }
 
 package(){
