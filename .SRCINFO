@@ -1,7 +1,7 @@
 pkgbase = android-tools
 	pkgdesc = Android platform tools
-	pkgver = 34.0.4
-	pkgrel = 5
+	pkgver = 34.0.5
+	pkgrel = 1
 	url = http://tools.android.com/
 	arch = x86_64
 	license = Apache
@@ -17,9 +17,7 @@ pkgbase = android-tools
 	depends = zstd
 	depends = android-udev
 	depends = pcre2
-	source = https://github.com/nmeum/android-tools/releases/download/34.0.4/android-tools-34.0.4.tar.xz
-	source = fix-fastboot-flash.patch
-	sha256sums = 7a22ff9cea81ff4f38f560687858e8f8fb733624412597e3cc1ab0262f8da3a1
-	sha256sums = ca78e22eee09d0b6f73fa954ac5fa5d85e3470cc8b98fa7ba1f32aaeef326f5b
+	source = https://github.com/nmeum/android-tools/releases/download/34.0.5/android-tools-34.0.5.tar.xz
+	sha256sums = fb09cff12cfb82acf42a8ebebbc0342671bfcd02117716368bdc73fdda60304a
 
 pkgname = android-tools

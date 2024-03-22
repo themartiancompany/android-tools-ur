@@ -3,25 +3,17 @@
 # Contributor: Alucryd <alucryd at gmail dot com>
 
 pkgname=android-tools
-pkgver=34.0.4
+pkgver=34.0.5
 _tag=${pkgver} # https://github.com/nmeum/android-tools sometimes carries extra patch version on top of the upstream versioning
-pkgrel=5
+pkgrel=1
 pkgdesc='Android platform tools'
 arch=(x86_64)
 url='http://tools.android.com/'
 license=(Apache MIT)
 depends=(libusb protobuf brotli zstd android-udev pcre2)
 makedepends=(gtest cmake go ninja git)
-source=(https://github.com/nmeum/android-tools/releases/download/$_tag/android-tools-$_tag.tar.xz
-        fix-fastboot-flash.patch)
-sha256sums=('7a22ff9cea81ff4f38f560687858e8f8fb733624412597e3cc1ab0262f8da3a1'
-            'ca78e22eee09d0b6f73fa954ac5fa5d85e3470cc8b98fa7ba1f32aaeef326f5b')
-
-prepare() {
-  cd android-tools-$_tag
-
-  patch -p1 < ../fix-fastboot-flash.patch
-}
+source=(https://github.com/nmeum/android-tools/releases/download/$_tag/android-tools-$_tag.tar.xz)
+sha256sums=('fb09cff12cfb82acf42a8ebebbc0342671bfcd02117716368bdc73fdda60304a')
 
 build() {
   cd android-tools-$_tag
