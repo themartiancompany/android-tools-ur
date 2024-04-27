@@ -1,6 +1,6 @@
 pkgbase = android-tools
 	pkgdesc = Android platform tools
-	pkgver = 34.0.5
+	pkgver = 35.0.1
 	pkgrel = 1
 	url = http://tools.android.com/
 	arch = x86_64
@@ -17,7 +17,7 @@ pkgbase = android-tools
 	depends = zstd
 	depends = android-udev
 	depends = pcre2
-	source = https://github.com/nmeum/android-tools/releases/download/34.0.5/android-tools-34.0.5.tar.xz
-	sha256sums = fb09cff12cfb82acf42a8ebebbc0342671bfcd02117716368bdc73fdda60304a
+	source = https://github.com/nmeum/android-tools/releases/download/35.0.1/android-tools-35.0.1.tar.xz
+	sha256sums = 654030c7f96d25d7224cd6861fac14a043cf1d3980f40288cdfbe219f94ffaf9
 
 pkgname = android-tools

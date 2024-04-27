@@ -3,7 +3,7 @@
 # Contributor: Alucryd <alucryd at gmail dot com>
 
 pkgname=android-tools
-pkgver=34.0.5
+pkgver=35.0.1
 _tag=${pkgver} # https://github.com/nmeum/android-tools sometimes carries extra patch version on top of the upstream versioning
 pkgrel=1
 pkgdesc='Android platform tools'
@@ -13,7 +13,7 @@ license=(Apache MIT)
 depends=(libusb protobuf brotli zstd android-udev pcre2)
 makedepends=(gtest cmake go ninja git)
 source=(https://github.com/nmeum/android-tools/releases/download/$_tag/android-tools-$_tag.tar.xz)
-sha256sums=('fb09cff12cfb82acf42a8ebebbc0342671bfcd02117716368bdc73fdda60304a')
+sha256sums=('654030c7f96d25d7224cd6861fac14a043cf1d3980f40288cdfbe219f94ffaf9')
 
 build() {
   cd android-tools-$_tag
