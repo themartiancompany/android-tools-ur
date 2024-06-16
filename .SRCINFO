@@ -1,7 +1,7 @@
 pkgbase = android-tools
 	pkgdesc = Android platform tools
 	pkgver = 35.0.1
-	pkgrel = 1
+	pkgrel = 2
 	url = http://tools.android.com/
 	arch = x86_64
 	license = Apache
@@ -17,6 +17,7 @@ pkgbase = android-tools
 	depends = zstd
 	depends = android-udev
 	depends = pcre2
+	optdepends = python: {mk,unpack_,repack_}bootimg and mkdtboimg support
 	source = https://github.com/nmeum/android-tools/releases/download/35.0.1/android-tools-35.0.1.tar.xz
 	sha256sums = 654030c7f96d25d7224cd6861fac14a043cf1d3980f40288cdfbe219f94ffaf9
 
