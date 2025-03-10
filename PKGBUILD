@@ -5,7 +5,7 @@
 pkgname=android-tools
 pkgver=35.0.2
 _tag=${pkgver} # https://github.com/nmeum/android-tools sometimes carries extra patch version on top of the upstream versioning
-pkgrel=11
+pkgrel=12
 pkgdesc='Android platform tools'
 arch=(x86_64)
 url='http://tools.android.com/'
@@ -13,8 +13,16 @@ license=(Apache MIT)
 depends=(fmt protobuf brotli zstd android-udev pcre2)
 makedepends=(gtest cmake go ninja git)
 optdepends=('python: {mk,unpack_,repack_}bootimg and mkdtboimg support')
-source=(https://github.com/nmeum/android-tools/releases/download/$_tag/android-tools-$_tag.tar.xz)
-sha256sums=('d2c3222280315f36d8bfa5c02d7632b47e365bfe2e77e99a3564fb6576f04097')
+source=(https://github.com/nmeum/android-tools/releases/download/$_tag/android-tools-$_tag.tar.xz
+        android-tools-35.0.2-fix-protobuf-30.0-compilation.patch)
+sha256sums=('d2c3222280315f36d8bfa5c02d7632b47e365bfe2e77e99a3564fb6576f04097'
+            'cd2034ca35c3b5ca82f095106cd099abdbc5a682b7b9892eb0ebead616370e96')
+
+prepare() {
+  cd android-tools-$_tag
+  patch -Np 1 -d "vendor/extras" < ../android-tools-35.0.2-fix-protobuf-30.0-compilation.patch
+
+}
 
 build() {
   cd android-tools-$_tag
