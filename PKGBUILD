@@ -53,6 +53,12 @@ _pkgdesc=(
 )
 pkgdesc="${_pkgdesc[*]}"
 arch=(
+  'arm'
+  'armv7l'
+  'aarch64'
+  'i686'
+  'pentium4'
+  'powerpc'
   'x86_64'
 )
 url="http://${_component}.${_domain}"
